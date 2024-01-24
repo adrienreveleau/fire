@@ -5,7 +5,7 @@ import os, time, subprocess, sys
 FORMATS = [".js", ".h", ".cpp", ".css", ".scss", ".html", ".ts"]
 BUILD_CMD = sys.argv[1] # "ninja"
 BUILD_DIR = os.path.join(os.path.dirname(os.path.realpath(__file__)), sys.argv[2])
-START_CMD = sys.argv[3] # "./crow_test"
+START_CMD = f"{BUILD_DIR}/{sys.argv[3]}" 
 
 print("""
                                       
@@ -46,6 +46,7 @@ print(f"Commande d'exécution : {START_CMD}")
 print("------------------------------------- ")
 print(" ")
 print("Nous sommes prêts à compiler vos scandaleux fichiers.")
+print(" ")
 
 def compile():
     print("Journal de compilation :")
