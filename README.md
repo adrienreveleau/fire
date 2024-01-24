@@ -1,13 +1,13 @@
 # fire
 Universal Hot reloading
 
-# Lancement
+### Lancement
 
 ```bash
 $ python fire.py <builder> <build dest> <exec command>
 ```
 
-# Variables
+### Variables
 
 ```python
 FORMATS = [".js", ".h", ".cpp", ".css", ".scss", ".html", ".ts"]
