@@ -1,4 +1,5 @@
-# fire
+![fire](https://github.com/adrienreveleau/fire/assets/131309787/7a8fef99-b3d3-43da-8edf-cc34a8359035)
+
 Universal Hot reloading
 
 ### Requirements
