@@ -1,10 +1,17 @@
-# fire
+## fire
 Universal Hot reloading
+
+### Requirements
+```bash
+Python 3.11.4
+
+$ pip install watchdog   
+```
 
 ### Lancement
 
 ```bash
-$ python fire.py <builder> <build dest> <exec command>
+$ python fire.py <builder> <build dest> <exec command> 
 ```
 
 ### Variables
