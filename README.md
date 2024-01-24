@@ -10,7 +10,9 @@ $ pip install watchdog
 ```
 
 #### Lancement
-
+```bash
+$ git clone https://github.com/adrienreveleau/fire.git
+```
 ```bash
 $ python fire.py <builder> <build dest> <exec command> 
 ```
