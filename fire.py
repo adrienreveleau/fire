@@ -38,6 +38,14 @@ print("------------------------------------- ")
 print(" ")
 print("Nous sommes prêts à compiler vos scandaleux fichiers.")
 
+def compile():
+    print("Journal de compilation :")
+    subprocess.run(BUILD_CMD, shell=True, cwd=BUILD_DIR)
+    print("Compilation terminée avec succès.")
+    print("\nExécution de l'application...")
+    subprocess.run(START_CMD, shell=True, cwd=BUILD_DIR)
+    print("Exécution terminée avec succès.\n")
+
 class FileHandler(FileSystemEventHandler):
     def on_modified(self, event):
         self.process(event)
@@ -49,12 +57,7 @@ class FileHandler(FileSystemEventHandler):
     def process(self, event):
         if  any(event.src_path.endswith(f) for f in FORMATS):
             print("\nDes modifications ont été détectées. Compilation de l'application en cours...")
-            print("Journal de compilation :")
-            subprocess.run(BUILD_CMD, shell=True, cwd=BUILD_DIR)
-            print("Compilation terminée avec succès.")
-            print("\nExécution de l'application...")
-            subprocess.run(START_CMD, shell=True, cwd=BUILD_DIR)
-            print("Exécution terminée avec succès.\n")
+            compile()
 
 if __name__ == '__main__':
     event_handler = FileHandler()
@@ -65,6 +68,7 @@ if __name__ == '__main__':
         recursive=True,
     )
     observer.start()
+    compile()
 
     try:
         while True:
