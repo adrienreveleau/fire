@@ -2,20 +2,20 @@
 
 Universal Hot reloading
 
-### Requirements
+#### Requirements
 ```bash
 Python 3.11.4
 
 $ pip install watchdog   
 ```
 
-### Lancement
+#### Lancement
 
 ```bash
 $ python fire.py <builder> <build dest> <exec command> 
 ```
 
-### Variables
+#### Variables
 
 ```python
 FORMATS = [".js", ".h", ".cpp", ".css", ".scss", ".html", ".ts"]
