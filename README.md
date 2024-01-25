@@ -20,7 +20,7 @@ $ python fire.py <builder> <build dest> <exec command>
 #### Variables
 
 ```python
-FORMATS = [".js", ".h", ".cpp", ".css", ".scss", ".html", ".ts"]
+FORMATS = [".js", ".h", ".cpp", ".css", ".scss", ".html", ".ts", ".go"]
 BUILD_CMD = sys.argv[1] # "ninja"
 BUILD_DIR = os.path.join(os.path.dirname(os.path.realpath(__file__)), sys.argv[2])
 START_CMD = f"{BUILD_DIR}/{sys.argv[3]}" 
