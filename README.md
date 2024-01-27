@@ -15,7 +15,7 @@ $ pip install watchdog
 #### Lancement
 
 ```bash
-$ python fire.py <compile cmd> <builder> <build dest> <exec cmd> 
+$ python fire.py <pre-build cmd> <builder> <build dest> <exec cmd> 
 ```
 *Pour que votre fichier puisse être exécutable par **fire** il vous faudra exécuter la commande suivante :*
 ```bash
@@ -29,5 +29,5 @@ FORMATS = [".js", ".h", ".cpp", ".css", ".scss", ".html", ".ts"]
 BUILD_CMD = sys.argv[2] # ex. "ninja"
 BUILD_DIR = os.path.join(os.path.dirname(os.path.realpath(__file__)), sys.argv[3]) # ex. ../build
 START_CMD = f"{BUILD_DIR}/{sys.argv[4]}" # ex. htmlc 
-COMPILE_CMD = sys.argv[1] # ex. ../compile.sh
+PREBUILD_CMD = sys.argv[1] # ex. ../pre_build.sh
 ```
