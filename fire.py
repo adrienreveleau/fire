@@ -123,10 +123,10 @@ if __name__ == '__main__':
     )
 
     letdrain(BUILD_DIR)
-    observer.start()
     letcompile()
     letbuild()
     letexec()
+    observer.start()
 
     try:
         while True:
