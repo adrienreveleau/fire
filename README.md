@@ -15,7 +15,7 @@ $ pip install watchdog
 #### Lancement
 
 ```bash
-$ python fire.py <compiler cmd> <builder> <build dest> <exec cmd> 
+$ python fire.py <compile cmd> <builder> <build dest> <exec cmd> 
 ```
 *Pour que votre fichier puisse être exécutable par **fire** il vous faudra exécuter la commande suivante :*
 ```bash
