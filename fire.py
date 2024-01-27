@@ -7,7 +7,7 @@ FORMATS = [".js", ".h", ".cpp", ".css", ".scss", ".html", ".ts"]
 BUILD_CMD = sys.argv[2] # ex. "ninja"
 BUILD_DIR = os.path.join(os.path.dirname(os.path.realpath(__file__)), sys.argv[3]) # ex. ../build
 START_CMD = f"{BUILD_DIR}/{sys.argv[4]}" # ex. htmlc 
-COMPILE_CMD = sys.argv[1] # ex. ../compile.sh
+PREBUILD_CMD = sys.argv[1] # ex. ../compile.sh
 
 print("""
                                       
@@ -41,14 +41,14 @@ print("""
 
 print("fire v0.1")
 print(" ")
-print("----------- Configuration ------------")
-print(f"Commande de Compilation :   {COMPILE_CMD}")
+print("---------------- Configuration -----------------")
+print(f"Commande de Pré-build   :   {PREBUILD_CMD}")
 print(f"Commande de Build       :   {BUILD_CMD}")
 print(f"Dossier de Compilation  :   {BUILD_DIR}")
 print(f"Commande d'exécution    :   {START_CMD}")
 print(f"logs                    :   {CONFIG['logger']}")
 print(f"Niveau de logs          :   {CONFIG['logLVL']}")
-print("------------------------------------- ")
+print("-----------------------------------------------")
 print(" ")
 print("Nous sommes prêts à compiler vos scandaleux fichiers.")
 print(" ")
@@ -75,9 +75,9 @@ def letexec():
     print("Exécuté avec succès.\n")
 
 def letcompile():
-    logger("Journal de Compilation :", 1)
-    subprocess.run(COMPILE_CMD, shell=True, cwd=BUILD_DIR)
-    print("Compilation terminée avec succès.")
+    logger("Journal de Pré-build :", 1)
+    subprocess.run(PREBUILD_CMD, shell=True, cwd=BUILD_DIR)
+    print("Pré-build terminée avec succès.")
 
 def letbuild():
     logger("Journal de build :", 1)
