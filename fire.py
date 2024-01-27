@@ -7,7 +7,7 @@ FORMATS = [".js", ".h", ".cpp", ".css", ".scss", ".html", ".ts"]
 BUILD_CMD = sys.argv[2] # ex. "ninja"
 BUILD_DIR = os.path.join(os.path.dirname(os.path.realpath(__file__)), sys.argv[3]) # ex. ../build
 START_CMD = f"{BUILD_DIR}/{sys.argv[4]}" # ex. htmlc 
-PREBUILD_CMD = sys.argv[1] # ex. ../compile.sh
+PREBUILD_CMD = sys.argv[1] # ex. ../pre_build.sh
 
 print("""
                                       
