@@ -2,19 +2,20 @@
 
 Universal Hot reloading
 
+#### Installation
+```bash
+$ git clone https://github.com/adrienreveleau/fire.git
+```
 #### Requirements
 ```bash
 Python 3.11.4
 
-$ pip install watchdog   
+$ pip install watchdog  
 ```
-
 #### Lancement
+
 ```bash
-$ git clone https://github.com/adrienreveleau/fire.git
-```
-```bash
-$ python fire.py <compiler> <builder> <build dest> <exec command> 
+$ python fire.py <compiler cmd> <builder> <build dest> <exec cmd> 
 ```
 *Pour que votre fichier puisse être exécutable par **fire** il vous faudra exécuter la commande suivante :*
 ```bash
